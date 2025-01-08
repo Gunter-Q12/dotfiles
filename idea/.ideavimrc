@@ -13,11 +13,6 @@ let mapleader=" "
 " Some random mappings
 inoremap jk <Esc>
 
-" set up which key plugin (installation in the store is required)
-set which-key
-set notimeout
-let g:WhichKey_FontSize = 20
-
 " -- mapping to intellij actions --
 " -- refactoring --
 let g:WhichKeyDesc_refactor = "<leader>r refactor"
@@ -31,6 +26,7 @@ let g:WhichKeyDesc_refactor = "<leader>ra all refactors"
 map <leader>rf <Action>(ReformatCode)
 let g:WhichKeyDesc_file_reformat = "<leader>rf file reformat"
 
+
 " -- navigation
 map gf <Action>(MethodDown)
 let g:WhichKeyDesc_method_down = "gf method down"
@@ -42,11 +38,15 @@ let g:WhichKeyDesc_next_change = "gc next change"
 map gC <Action>(VcsShowPrevChangeMarker)
 let g:WhichKeyDesc_previous_change = "gC previous change"
 
-
 map ge <Action>(GotoNextError)
 let g:WhichKeyDesc_next_error = "ge next error"
 map gE <Action>(GotoPreviousError)
 let g:WhichKeyDesc_previous_error = "gE previous error"
+
+map g; <Action>(JumpToLastChange)
+let g:WhichKeyDesc_jump_last_change = "g; jump last change"
+map g, <Action>(JumpToNextChange)
+let g:WhichKeyDesc_jump_Next_change = "g, jump next change"
 
 
 " -- execution --
@@ -60,7 +60,6 @@ let g:WhichKeyDesc_run_class = "<leader>ec under cursor"
 
 map <leader>es <Action>(RunAnything)
 let g:WhichKeyDesc_select = "<leader>es select"
-
 
 
 " -- windows --
@@ -80,6 +79,7 @@ let g:WhichKeyDesc_hide_windows = "<leader>wh hide"
 
 map <leader>ws <Action>(RecentFiles)
 let g:WhichKeyDesc_recent_files = "<leader>ws switcher"
+
 
 " - tabs --
 map H <Action>(PreviousTab)
@@ -104,6 +104,11 @@ map <leader>tp <Action>(PreviousSplitter)
 let g:WhichKeyDesc_previous_splitter = "<leader>tp previous split"
 
 
+" -- visual --
+vmap v <Action>(EditorSelectWord)
+vmap V <Action>(EditorUnSelectWord)
+
+
 " -- misc --
 map <leader>i <Action>(ShowHoverInfo)
 let g:WhichKeyDesc_show_info = "<leader>i show info"
@@ -113,9 +118,7 @@ let g:WhichKeyDesc_toggle_collapse = "<leader>c collapse"
 
 
 
-
-
-"" -- Suggested options --
+" -- Random options --
 " Show a few lines of context around the cursor. Note that this makes the
 " text scroll if you mouse-click near the start or end of the window.
 set scrolloff=5
@@ -129,33 +132,36 @@ map Q gq
 set clipboard^=unnamedplus,unnamed
 " set clipboard+=unnamed
 
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
-" easy motion
-" set easymotion
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+" set up which key plugin (installation in the store is required)
+set which-key
+set notimeout
+let g:WhichKey_FontSize = 20
+
+
+" easy motion (INSTALLATION NEEDED)
+" https://github.com/AlexPl292/IdeaVim-EasyMotion
+set easymotion
+let g:WhichKeyDesc_easymotion = "<leader>ww easymotion"
+
 
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
 
+
 " Commentary plugin
 " Plug 'tpope/vim-commentary'
+
 
 " Nerdtree: https://github.com/JetBrains/ideavim/wiki/NERDTree-support
 Plug 'preservim/nerdtree'
 
+
 " change surrounding symbols
 set surround
+
 
 " highlight unique symbols when using f
 set quickscope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-
-"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
-"map \r <Action>(ReformatCode)
-
-"" Map <leader>d to start debug
-"map <leader>d <Action>(Debug)
-
-"" Map \b to toggle the breakpoint on the current line
-"map \b <Action>(ToggleLineBreakpoint)
