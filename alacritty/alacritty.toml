@@ -15,4 +15,4 @@ startup_mode = "Maximized"
 save_to_clipboard = true  # use primary clipboard
 
 [terminal]
-shell = "/bin/fish"
+shell = "/bin/tmux"
