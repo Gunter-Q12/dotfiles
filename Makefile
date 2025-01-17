@@ -25,3 +25,8 @@ tmux:
 	ln -s -f .tmux/.tmux.conf
 	fish -c "set -Ux VISUAL /bin/vim"  # you are supposed to have fish at this point
 	fish -c "set -Ux EDITOR /bin/vim"  # you are supposed to have fish at this point
+
+
+.PHONY: xfce 
+xfce:
+	ln -i ./xfce/xfce4-keyboard-shortcuts.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
