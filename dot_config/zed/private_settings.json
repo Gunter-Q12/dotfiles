@@ -1,0 +1,106 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "model_parameters": [],
+    "default_profile": "ask",
+    "version": "2"
+  },
+  "ssh_connections": [
+    {
+      "host": "192.168.1.77",
+      "projects": [
+        {
+          "paths": ["/home/gunter/Programming/KIT"]
+        }
+      ]
+    }
+  ],
+  "languages": {
+    "Shell Script": {
+      "show_edit_predictions": true
+    },
+    "Haskell": {
+      "show_edit_predictions": false
+    },
+    "SQL": {
+      "show_edit_predictions": true
+    },
+    "Go": {
+      "show_edit_predictions": false
+    },
+    "JavaScript": {
+      "language_servers": ["typescript-language-server"]
+    }
+  },
+  "show_edit_predictions": false,
+  "icon_theme": "Material Icon Theme",
+  "vim_mode": true,
+  "ui_font_size": 27,
+  "buffer_font_size": 40,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "hints": {
+    "assignVariableTypes": true,
+    "compositeLiteralFields": true,
+    "compositeLiteralTypes": true,
+    "constantValues": true,
+    "functionTypeParameters": true,
+    "parameterNames": true,
+    "rangeVariableTypes": true
+  },
+
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "edit_predictions": {
+    "mode": "subtle"
+  },
+
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+
+  "lsp": {
+    "clangd": {
+      "binary": {
+        "path": "/usr/bin/clangd",
+        "arguments": []
+      }
+    }
+  },
+
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": null
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    }
+  },
+  "tabs": {
+    "file_icons": true
+  }
+}

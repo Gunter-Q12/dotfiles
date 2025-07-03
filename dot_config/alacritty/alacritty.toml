@@ -1,0 +1,18 @@
+#[general]
+#import = [
+#    "~/.config/alacritty/themes/themes/tokyo_night.toml"
+#]
+
+[font]
+normal = { family = "JetBrainsMonoNerdFont", style = "Regular" }
+size = 30.0
+
+[window]
+dimensions = { columns = 60, lines = 20 }
+startup_mode = "Maximized"
+
+[selection]
+save_to_clipboard = true  # use primary clipboard
+
+[terminal]
+shell = "/usr/bin/fish"
