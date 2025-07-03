@@ -1,0 +1,193 @@
+ .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+" Good example: https://www.cyberwizard.io/posts/the-ultimate-ideavim-setup/
+" Find actions yourself using "Track Actions"
+
+" My additions
+" Set leader to space
+"nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+" Some random mappings
+inoremap jk <Esc>
+
+" -- mapping to intellij actions --
+" -- refactoring --
+let g:WhichKeyDesc_refactor = "<leader>r refactor"
+
+map <leader>rr <Action>(RenameElement)
+let g:WhichKeyDesc_rename = "<leader>rr rename"
+
+map <leader>ra <Action>(Refactorings.QuickListPopupAction)
+let g:WhichKeyDesc_refactor = "<leader>ra all refactors"
+
+map <leader>rf <Action>(ReformatCode)
+let g:WhichKeyDesc_file_reformat = "<leader>rf file reformat"
+
+
+" -- navigation
+map gf <Action>(MethodDown)
+let g:WhichKeyDesc_method_down = "gf method down"
+map gF <Action>(MethodUp)
+let g:WhichKeyDesc_method_up = "gF method up"
+
+map gc <Action>(VcsShowNextChangeMarker)
+let g:WhichKeyDesc_next_change = "gc next change"
+map gC <Action>(VcsShowPrevChangeMarker)
+let g:WhichKeyDesc_previous_change = "gC previous change"
+
+map ge <Action>(GotoNextError)
+let g:WhichKeyDesc_next_error = "ge next error"
+map gE <Action>(GotoPreviousError)
+let g:WhichKeyDesc_previous_error = "gE previous error"
+
+map g; <Action>(JumpToLastChange)
+let g:WhichKeyDesc_jump_last_change = "g; jump last change"
+map g, <Action>(JumpToNextChange)
+let g:WhichKeyDesc_jump_Next_change = "g, jump next change"
+
+
+" -- execution --
+let g:WhichKeyDesc_execute = "<leader>e execute"
+
+" <Action>(ActivateRunToolWindow)
+map <leader>er <Action>(Run)
+let g:WhichKeyDesc_run = "<leader>er run"
+
+
+" <Action>(ActivateRunToolWindow)
+map <leader>ec <Action>(RunClass)
+let g:WhichKeyDesc_run_class = "<leader>ec under cursor"
+
+map <leader>es <Action>(RunAnything)
+let g:WhichKeyDesc_select = "<leader>es select"
+
+
+" -- windows --
+let g:WhichKeyDesc_windows = "<leader>w windows"
+
+map <leader>wf :NERDTree<CR>
+let g:WhichKeyDesc_files_window = "<leader>wf files"
+
+map <leader>ws <Action>(SelectInProjectView)
+let g:WhichKeyDesc_scope_window = "<leader>ws scope file"
+
+map <leader>wt <Action>(ActivateTerminalToolWindow)
+let g:WhichKeyDesc_terminal_window = "<leader>wt terminal"
+
+" map <leader>wr <Action>(ActivateRunToolWindow)
+" let g:WhichKeyDesc_run_window = "<leader>wr run"
+
+map <leader>wh <Action>(HideAllWindows)
+let g:WhichKeyDesc_hide_windows = "<leader>wh hide"
+
+map <leader>wr <Action>(RecentFiles)
+let g:WhichKeyDesc_recent_files = "<leader>wr recent"
+
+
+" - tabs --
+map H <Action>(PreviousTab)
+map L <Action>(NextTab)
+
+let g:WhichKeyDesc_tabs = "<leader>t tabs"
+
+map <leader>t% <Action>(SplitVertically)
+let g:WhichKeyDesc_split_vertically = "<leader>t% split vertically"
+
+" -- use :q to close tabs
+" map <leader>tc <Action>(CloseContent)
+" let g:WhichKeyDesc_close_tab = "<leader>tn close tab"
+
+map <leader>t" "" <Action>(SplitHorizontally)
+" not sure how to create a string with a double quote
+
+map <leader>tn <Action>(NextSplitter)
+let g:WhichKeyDesc_next_splitter = "<leader>tn next split"
+
+map <leader>tp <Action>(PreviousSplitter)
+let g:WhichKeyDesc_previous_splitter = "<leader>tp previous split"
+
+
+" -- visual --
+vmap v <Action>(EditorSelectWord)
+vmap V <Action>(EditorUnSelectWord)
+
+" -- actions --
+map <leader>af <Action>(Find)
+let g:WhichKeyDesc_Find = "<leader>af Find"
+
+map <leader>ar <Action>(Replace)
+let g:WhichKeyDesc_Replace = "<leader>ar Replace"
+
+" -- deployment --
+map <leader>du <Action>(PublishGroup.Upload)
+let g:WhichKeyDesc_Upload = "<leader>du Upload"
+
+map <leader>dd <Action>(PublishGroup.Download)
+let g:WhichKeyDesc_Download = "<leader>dd Download"
+
+map <leader>dc <Action>(PublishGroup.CompareLocalVsRemote)
+let g:WhichKeyDesc_Compare = "<leader>dc Compare"
+
+
+" -- misc --
+map <leader>i <Action>(ShowHoverInfo)
+let g:WhichKeyDesc_show_info = "<leader>i show info"
+
+map <leader>o <Action>(ExternalJavaDoc)
+let g:WhichKeyDesc_show_info = "<leader>i show info"
+
+
+map <leader>c <Action>(ExpandCollapseToggleAction)
+let g:WhichKeyDesc_toggle_collapse = "<leader>c collapse"
+
+
+" -- Random options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+set clipboard^=unnamedplus,unnamed
+" set clipboard+=unnamed
+
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+" set up which key plugin (installation in the store is required)
+set which-key
+set notimeout
+let g:WhichKey_FontSize = 20
+
+
+" easy motion (INSTALLATION NEEDED)
+" https://github.com/AlexPl292/IdeaVim-EasyMotion
+set easymotion
+let g:WhichKeyDesc_easymotion = "<leader>ww easymotion"
+
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+
+
+" Commentary plugin
+" Plug 'tpope/vim-commentary'
+
+
+" Nerdtree: https://github.com/JetBrains/ideavim/wiki/NERDTree-support
+Plug 'preservim/nerdtree'
+
+
+" change surrounding symbols
+set surround
+
+
+" highlight unique symbols when using f
+set quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
