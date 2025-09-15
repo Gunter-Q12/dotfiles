@@ -99,7 +99,7 @@
     },
     // EXPLORER
     {
-        "key": "ctrl+shift+e",
+        "key": "ctrl+e",
         "command": "workbench.view.explorer"
     },
     {
@@ -134,7 +134,7 @@
     },
 	// FOCUS EDITOR
 	{
-		"key": "shift+i",
+		"key": "ctrl+i",
 		"command": "workbench.action.focusActiveEditorGroup",
 		"when": "!editorFocus"
 	},
