@@ -8,8 +8,20 @@ sudo snap install nvim --classic
 # curl -f https://zed.dev/install.sh | sh
 
 
-echo "Installing fonts"
 FONT_DIR="$HOME/.fonts"
+{{ else if eq .chezmoi.os "darwin" -}}
+sudo brew install tmux
+sudo brew install fish
+sudo brew install neovim
+sudo brew brew install --cask visual-studio-code
+sudo brew install --cask obsidian
+sudo brew install --cask alacritty
+
+
+FONT_DIR="~/Library/Fonts"
+{{ end -}}
+
+echo "Installing fonts into $FONT_DIR"
 if [ ! -d "$FONT_DIR" ]; then
     mkdir ~/.fonts
 fi
@@ -20,6 +32,3 @@ else
     wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
     unzip /tmp/JetBrainsMono.zip -d ~/.fonts
 fi
-
-{{ else if eq .chezmoi.os "darwin" -}}
-{{ end -}}
