@@ -1,0 +1,25 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/sh
+echo "Installing apps"
+sudo apt install -y tmux fish 
+sudo snap install obsidian --classic
+sudo snap install alacritty --classic
+sudo snap install nvim --classic
+# curl -f https://zed.dev/install.sh | sh
+
+
+echo "Installing fonts"
+FONT_DIR="$HOME/.fonts"
+if [ ! -d "$FONT_DIR" ]; then
+    mkdir ~/.fonts
+fi
+
+if ls "$FONT_DIR"/*JetBrainsMonoNerdFont* 1> /dev/null 2>&1; then
+    echo "Jetbrains fonts already installed"
+else
+    wget -P /tmp https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip
+    unzip /tmp/JetBrainsMono.zip -d ~/.fonts
+fi
+
+{{ else if eq .chezmoi.os "darwin" -}}
+{{ end -}}
