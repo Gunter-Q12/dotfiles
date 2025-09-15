@@ -1,0 +1,154 @@
+{
+    // ui
+    "editor.fontSize": 24,
+    "terminal.integrated.fontSize": 16,
+    "window.zoomLevel": -1,
+
+
+	"editor.minimap.enabled": false,
+    "breadcrumbs.enabled": true,
+
+    // Bracket-pair colorization
+    "editor.bracketPairColorization.enabled": false, 
+
+    // Bracket-pair guides
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.highlightActiveBracketPair": false,
+
+    // suggestions
+	"editor.inlayHints.enabled": "on",
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggest.showInlineDetails": true,
+    "editor.suggest.preview": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings":false, 
+    },
+    
+
+    // vim
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "vim.hlsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.vimrc.enable": true,
+    "vim.leader": "<Space>",
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+          "before": ["j", "k"],
+          "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+		// wrapped lines
+        { "before": ["j"], "after": ["g", "j"] },
+        { "before": ["k"], "after": ["g", "k"] },
+
+
+
+        // tabs
+        { "before": ["<S-h>"], "commands": [":bprevious"] },
+        { "before": ["<S-l>"], "commands": [":bnext"] },
+
+		// splits
+		{ "before": ["leader", "v"], "commands": [":vsplit"] },
+		{ "before": ["leader", "s"], "commands": [":split"] },
+
+		// panes
+		{
+			"before": ["leader", "h"],
+			"commands": ["workbench.action.focusLeftGroup"]
+		},
+		{
+			"before": ["leader", "j"],
+			"commands": ["workbench.action.focusBelowGroup"]
+		},
+		{
+			"before": ["leader", "k"],
+			"commands": ["workbench.action.focusAboveGroup"]
+		},
+		{
+			"before": ["leader", "l"],
+			"commands": ["workbench.action.focusRightGroup"]
+		},
+        // LSP
+		// Go to Definition
+		{
+			"before": ["g", "d"],
+			"commands": ["editor.action.goToDefinition"]
+		},
+		// Peek Definition
+		{
+			"before": ["g", "p", "d"],
+			"commands": ["editor.action.peekDefinition"]
+		},
+		// Show Hover
+		{
+			"before": ["g", "h"],
+			"commands": ["editor.action.showDefinitionPreviewHover"]
+		},
+		// Go to Implementations
+		{
+			"before": ["g", "i"],
+			"commands": ["editor.action.goToImplementation"]
+		},
+		// Peek Implementations
+		{
+			"before": ["g", "p", "i"],
+			"commands": ["editor.action.peekImplementation"]
+		},
+		// Quick fix
+		{
+			"before": ["g", "q"],
+			"commands": ["editor.action.quickFix"]
+		},
+		// Go to References
+		{
+			"before": ["g", "r"],
+			"commands": ["editor.action.referenceSearch.trigger"]
+		},
+		// Go to Type Definition
+		{
+			"before": ["g", "t"],
+			"commands": ["editor.action.goToTypeDefinition"]
+		},
+		// Peek Type Definition
+		{
+			"before": ["g", "p", "t"],
+			"commands": ["editor.action.peekTypeDefinition"]
+		},
+        // other
+		{
+			"before": ["leader", "f"],
+			"commands": ["workbench.action.quickOpen"]
+		},
+		{
+			"before": ["leader", "p"],
+			"commands": ["editor.action.formatDocument"]
+		},
+        {
+            "before": ["leader", "w", "e"],
+            "commands": ["workbench.view.explorer"]
+        },
+        {
+            "before": ["leader","e"],
+            "commands": ["workbench.action.focusActiveEditorGroup"],
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+          "before": ["j", "k"],
+          "after": ["<Esc>"]
+        },
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+        { "before": [">"], "commands": ["editor.action.indentLines"] },
+	],
+	"python.analysis.typeCheckingMode": "basic",
+	"workbench.layoutControl.enabled": false,
+	"chat.commandCenter.enabled": false,
+	"workbench.navigationControl.enabled": false,
+	"workbench.colorTheme": "Tokyo Night",
+	"redhat.telemetry.enabled": false,
+}

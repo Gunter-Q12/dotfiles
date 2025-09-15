@@ -9,15 +9,96 @@
 {
   "agent": {
     "model_parameters": [],
-    "default_profile": "ask",
-    "version": "2"
+    "default_profile": "ask"
   },
   "ssh_connections": [
     {
       "host": "192.168.1.77",
       "projects": [
         {
-          "paths": ["/home/gunter/Programming/KIT"]
+          "paths": [
+            "/home/gunter/Programming/KIT"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gunter/Programming/olly"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "51.250.89.195",
+      "username": "yc-user",
+      "projects": [
+        {
+          "paths": [
+            "/opt/dashboard"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "62.84.115.70",
+      "username": "yc-user",
+      "projects": [
+        {
+          "paths": [
+            "/home/yc-user"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "51.250.5.42",
+      "username": "yc-user",
+      "projects": [
+        {
+          "paths": [
+            "/home/yc-user"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "51.250.76.137",
+      "username": "yc-user",
+      "projects": [
+        {
+          "paths": [
+            "/home/yc-user"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "158.160.51.210",
+      "username": "yc-user",
+      "projects": [
+        {
+          "paths": [
+            "/home/yc-user"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "pc",
+      "projects": [
+        {
+          "paths": [
+            "/home/gunter/Programming"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gunter/Programming/KIT/12"
+          ]
+        },
+        {
+          "paths": [
+            "/home/gunter/Programming/KIT/olly"
+          ]
         }
       ]
     }
@@ -42,7 +123,7 @@
   "show_edit_predictions": false,
   "icon_theme": "Material Icon Theme",
   "vim_mode": true,
-  "ui_font_size": 27,
+  "ui_font_size": 30,
   "buffer_font_size": 40,
   "theme": {
     "mode": "dark",
@@ -83,7 +164,7 @@
 
   "inlay_hints": {
     "enabled": true,
-    "show_type_hints": true,
+    "show_type_hints": false,
     "show_parameter_hints": true,
     "show_other_hints": true,
     "show_background": false,

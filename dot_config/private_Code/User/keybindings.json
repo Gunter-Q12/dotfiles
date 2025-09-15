@@ -1,0 +1,157 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "shift+o",
+        "command": ""
+    },
+    // NAVIGATE POPUPS
+    {
+        "key": "ctrl+n",
+        "command": "selectNextSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "selectNextCodeAction",
+        "when": "codeActionMenuVisible"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "selectPrevCodeAction",
+        "when": "codeActionMenuVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenNavigatePrevious",
+        "when": "inQuickOpen"
+    },
+    // SCROLL POPUPS
+    {
+        "key": "h",
+        "command": "editor.action.scrollLeftHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "j",
+        "command": "editor.action.scrollDownHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "k",
+        "command": "editor.action.scrollUpHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "l",
+        "command": "editor.action.scrollRightHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "q",
+        "command": "editor.action.hideHover",
+        "when": "editorHoverFocused"
+    },
+    // SEARCH
+    {
+        "key": "ctrl+h",
+        "command": "actions.find",
+        "when": "editorFocus && editorIsOpen"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "closeFindWidget",
+        "when": "editorFocus && editorIsOpen && findWidgetVisible"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorFocus && editorIsOpen"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.nextMatchFindAction",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "editor.action.previousMatchFindAction",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    // EXPLORER
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "n",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+n",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "x",
+        "command": "filesExplorer.cut",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    // GIT
+    {
+        "command": "workbench.view.scm",
+        "key": "ctrl+shift+g"
+    },
+	// FOCUS EDITOR
+	{
+		"key": "shift+i",
+		"command": "workbench.action.focusActiveEditorGroup",
+		"when": "!editorFocus"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "workbench.action.togglePanel"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "workbench.action.showCommands"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.toggleAuxiliaryBar"
+	},
+]
