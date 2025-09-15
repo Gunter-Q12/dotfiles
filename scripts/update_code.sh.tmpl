@@ -1,0 +1,8 @@
+#!/usr/bin/sh
+
+{{ if eq .chezmoi.os "darwin" }}
+{{ else if eq .chezmoi.os "linux" }}
+cp ~/.config/Code/User/settings.json ~/.local/share/chezmoi/.chezmoitemplates/VSCodeSettings.json
+cp ~/.config/Code/User/keybindings.json ~/.local/share/chezmoi/.chezmoitemplates/VSCodeKeybindings.json
+{{ else }}
+{{ end }}

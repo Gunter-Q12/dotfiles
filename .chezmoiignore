@@ -3,3 +3,5 @@ Library/
 {{ else if eq .chezmoi.os "darwin" -}}
 .config/
 {{ end -}}
+
+scripts/
